@@ -7,7 +7,7 @@ const circle = {
         y: 1
     },
     draw: function () {
-        console.log('draw');
+        console.log('draw234');
     }
 };
 
