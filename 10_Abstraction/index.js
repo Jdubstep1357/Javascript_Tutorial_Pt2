@@ -24,3 +24,4 @@ circle.draw();
 
 // Abstraction - hide details and only show essentials
 // think of DVD player - outside has buttons easy - inside complex is inside
+/// Hide details only show essentials

@@ -2,19 +2,26 @@ function Circle(radius) {
 
     this.radius = radius;
 
-    this.defaultLocation = { x: 0, y: 0 };
+    let = defaultLocation = { x: 0, y: 0 };
 
-    this.computeOptimumLocation = function () {
+    let computeOptimumLocation = function () {
 
     }
 
     this.draw = function () {
-        this.computeOptimumLocation(0.1);
+        // x and y are local variables only inside function
+        let x, y;
+
+        computeOptimumLocation(0.1);
+
+        // this.radius
+
+
+        // closure determines what variables accessible to inner function
+        // variables continue to stay in memory even after being used once
     }
 
-    this.draw = function () {
-        console.log('draw');
-    };
+    console.log('draw');
 }
 
 
@@ -24,3 +31,4 @@ circle.draw();
 
 // Abstraction - hide details and only show essentials
 // think of DVD player - outside has buttons easy - inside complex is inside
+/// Hide details only show essentials
