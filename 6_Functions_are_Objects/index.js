@@ -21,6 +21,11 @@ const another = new Circle(1);
 
 //     `);
 
+// Circle.call({}, 1)
+// same as .call but with array
+// /circle.appl({}, [1,2,3])
+
+// same as above
 //     const circle = new Circle(1);
 
 

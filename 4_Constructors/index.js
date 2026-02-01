@@ -1,16 +1,26 @@
 // factory function
-
 function createCircle(radius) {
     return {
-        // key value pairs:
-        // radius is same as radius: radius,
         radius,
         draw: function () {
             console.log('draw');
         }
     };
 }
-
-// 1 is the radius
 const circle = createCircle(1);
-circle.draw();
+
+
+// Constructor Function
+function Circle(radius) {
+    console.log('this', this);
+    this.radius = radius;
+    this.draw = function () {
+        console.log('draw');
+    }
+}
+
+//  without new it just goes to global scope
+const another = new Circle(1);
+
+
+// Both are regular functions in javascript
