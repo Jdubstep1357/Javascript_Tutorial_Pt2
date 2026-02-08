@@ -3,6 +3,15 @@ function Shape(color) {
     this.color = color;
 }
 
+
+// Reusable function for constructor
+// extend function is Intermediate Function Inheritance
+function extend(Child, Parent) {
+    Child.prototpe = Object.create(Parent.prototype);
+    Circle.prototype.constructor = Circle;
+}
+
+
 Shape.prototype.duplicate = function () {
     console.log('duplicate');
 }
@@ -10,22 +19,26 @@ Shape.prototype.duplicate = function () {
 function Circle(radius, color) {
     // color referenced at bottom
     Shape.call(this, color);
-
     this.radius = radius;
 }
 
-// type c in the console
-// we cant create Circle objects in a dnamic fashion
-// Problem: reset prototype of circle
-Circle.prototype = Object.create(Shape.prototype);
+// extends Circle and Shape prototype constructor
+extend(Circle, Shape);
 
-// Solution: reset constructor
-Circle.prototype.constructor = Circle;
 
 
 Circle.prototype.draw = function () {
     console.log('draw');
 }
+
+function Square(size) {
+    this.size = size;
+}
+
+// Square.prototype = Object.create(Shape.prototype);
+// Square.prototype.constructor = Square;
+// IN PLACE OF ABOVE
+extend(Square, Shape);
 
 const s = new Shape();
 const c = new Circle(1, 'red');
