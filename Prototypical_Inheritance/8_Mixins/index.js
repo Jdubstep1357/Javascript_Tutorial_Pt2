@@ -1,83 +1,72 @@
 // --------------------------------------------------
-// POLYMORPHISM = "many forms"
+// MIXINS = sharing abilities between unrelated objects
+// Instead of inheritance (parent → child),
+// we "copy abilities" into objects.
 // --------------------------------------------------
-// Different objects can respond to the SAME method
-// in DIFFERENT ways.
 
 
+// This function copies properties from source objects
+// into the target object.
+function mixin(target, ...sources) {
 
-// ----------------------------------
-// PARENT "CLASS"
-// ----------------------------------
-function Shape() { }
-
-// Default duplicate method (fallback)
-Shape.prototype.duplicate = function () {
-    console.log('duplicate shape');
-};
-
-
-
-// ----------------------------------
-// CHILD CLASS: Circle
-// ----------------------------------
-function Circle() { }
-
-// Make Circle inherit from Shape
-extend(Circle, Shape);
-
-// Circle provides its OWN version of duplicate()
-// This OVERRIDES the parent method
-Circle.prototype.duplicate = function () {
-    console.log('duplicate circle');
-};
-
-
-
-// ----------------------------------
-// CHILD CLASS: Square
-// ----------------------------------
-function Square() { }
-
-// Make Square inherit from Shape
-extend(Square, Shape);
-
-// Square also overrides duplicate()
-Square.prototype.duplicate = function () {
-    console.log('duplicate square');
-};
-
-
-
-// ----------------------------------
-// CREATE MULTIPLE OBJECT TYPES
-// ----------------------------------
-const shapes = [
-    new Circle(),
-    new Square()
-];
-
-
-
-// ----------------------------------
-// POLYMORPHISM IN ACTION
-// ----------------------------------
-// SAME LINE OF CODE
-// Different behavior depending on object type
-for (let shape of shapes)
-    shape.duplicate();   // ← FIXED BUG (was shapes.duplicate)
-
-
-// OLD WAY - Without Polymorhism
-
-/*
-for (let shape of shapes) {
-    if (shape.type === 'circle')
-        duplicateCircle();
-    else if (shape.type === 'square')
-        duplicateSquare();
-    else
-        duplicateShape(); 
-
+    // Object.assign copies methods/properties
+    // from each source into the target.
+    Object.assign(target, ...sources);
 }
-*/
+
+
+
+// --------------------------------------------------
+// ABILITIES (FEATURE PACKS)
+// --------------------------------------------------
+// These are reusable behavior objects.
+
+const canEat = {
+    eat: function () {
+        this.hunger--;
+        console.log('eating');
+    }
+};
+
+const canWalk = {
+    walk: function () {
+        console.log('walking');
+    }
+};
+
+const canSwim = {
+    swim: function () {
+        console.log('swimming');
+    }
+};
+
+
+
+// --------------------------------------------------
+// PERSON "CLASS"
+// --------------------------------------------------
+function Person() {
+    // Here we could add Person-specific properties
+    this.hunger = 10;
+}
+
+// Give Person the ability to eat and walk
+mixin(Person.prototype, canEat, canWalk);
+
+const person = new Person();
+console.log(person);
+
+
+
+// --------------------------------------------------
+// GOLDFISH "CLASS"
+// --------------------------------------------------
+function Goldfish() {
+    this.hunger = 5;
+}
+
+// Give Goldfish the ability to eat and swim
+mixin(Goldfish.prototype, canEat, canSwim);
+
+const goldfish = new Goldfish();
+console.log(goldfish);
