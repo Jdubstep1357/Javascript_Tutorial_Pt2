@@ -1,3 +1,12 @@
+// ==================================================
+// File: Objects/1_Intro/index.js
+// Purpose: Intro to objects in JavaScript (object literals, factories, constructors).
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
 // OOP - Object Oriented Programming
 // OOP - Very important
 
@@ -21,4 +30,3 @@
 
 // Polymorphism - Technique that allows you to get rid of long
 // if and else or switch statements
-

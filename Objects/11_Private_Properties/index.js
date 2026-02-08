@@ -1,3 +1,14 @@
+// ==================================================
+// File: Objects/11_Private_Properties/index.js
+// Purpose: Private properties using closures (and why we do it).
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Circle(radius) {
 
     this.radius = radius;

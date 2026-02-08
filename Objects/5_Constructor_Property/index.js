@@ -1,7 +1,17 @@
+// ==================================================
+// File: Objects/5_Constructor_Property/index.js
+// Purpose: The `constructor` property and how objects know who created them.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
 // Constructor - references function that was used to 
 // construct or create object
 
 // factory function
+// Regular function `createCircle(radius)`.
 function createCircle(radius) {
     return {
         radius,
@@ -16,6 +26,8 @@ const circle = createCircle(1);
 
 
 // Constructor Function
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Circle(radius) {
     this.radius = radius;
     this.draw = function () {

@@ -1,13 +1,25 @@
+// ==================================================
+// File: Prototypical_Inheritance/2_Calling_Super_Constructor copy/index.js
+// Purpose: Calling a parent constructor with call() (super constructor).
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
 // ----------------------------------
 // PARENT "CLASS"
 // ----------------------------------
 // Empty constructor function for Shape objects
+// Constructor function `Shape()` — called with `new Shape(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Shape() {
 
 }
 
 // Add a method to the Shape prototype.
 // Every shape will share this method.
+// Shared method: `Shape.prototype.duplicate()` — stored once and shared by all `Shape` instances.
 Shape.prototype.duplicate = function () {
     console.log('duplicate');
 };
@@ -18,6 +30,8 @@ Shape.prototype.duplicate = function () {
 // CHILD "CLASS"
 // ----------------------------------
 // Circle constructor function
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Circle(radius) {
     this.radius = radius;
 }
@@ -33,6 +47,8 @@ function Circle(radius) {
 //
 // It creates a NEW object whose prototype is Shape.prototype,
 // and assigns it to Circle.prototype.
+// Inheritance step: make `Circle.prototype` inherit from `Shape.prototype` (so `Circle` instances can use parent methods).
+// After this line, remember to reset the constructor: `Child.prototype.constructor = Child`.
 Circle.prototype = Object.create(Shape.prototype);
 
 /*
@@ -53,6 +69,7 @@ Circle.prototype.constructor = Circle;
 // ----------------------------------
 // METHODS UNIQUE TO CIRCLE
 // ----------------------------------
+// Shared method: `Circle.prototype.draw()` — stored once and shared by all `Circle` instances.
 Circle.prototype.draw = function () {
     console.log('draw');
 };

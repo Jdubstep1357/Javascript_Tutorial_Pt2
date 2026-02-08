@@ -1,5 +1,16 @@
+// ==================================================
+// File: Prototypical_Inheritance/6_Polymorphism/index.js
+// Purpose: Polymorphism: same method name, different behavior per child type.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
 // ... collects all arguments and turns into array
+// Regular function `mixin(target, ...sources)`.
 function mixin(target, ...sources) {
+// `Object.assign(target, sources...)` copies properties/methods from sources onto target (used for mixins).
     Object.assign(target, ...sources);
 }
 
@@ -24,6 +35,8 @@ const canSwim = {
     }
 };
 
+// Constructor function `Person()` — called with `new Person(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Person() {
     // Add any properties specific to objects
 }
@@ -34,6 +47,8 @@ function Person() {
 mixin(Person.prototype, canEat, canWalk);
 console.log(person);
 
+// Constructor function `Goldfish()` — called with `new Goldfish(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Goldfish() {
 
 }

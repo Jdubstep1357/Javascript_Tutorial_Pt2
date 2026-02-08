@@ -1,3 +1,14 @@
+// ==================================================
+// File: Objects/9_Enumerating_Properties/index.js
+// Purpose: Enumerating properties: for...in, Object.keys, in operator.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Circle(radius) {
     this.radius = radius;
     this.draw = function () {

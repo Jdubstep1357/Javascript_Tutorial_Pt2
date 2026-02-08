@@ -1,3 +1,12 @@
+// ==================================================
+// File: Prototypes/2_Prototypes_Prototypical_Inheritance/index.js
+// Purpose: Understanding prototypes + how JS links objects together.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
 // Prototype - parent of other
 
 // define another object - shape and add all common methods for object
@@ -20,4 +29,3 @@ let x = {};
 
 // prototype is just a regular object
 // only root object doesnt have prototype
-

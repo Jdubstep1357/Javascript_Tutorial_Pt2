@@ -1,3 +1,12 @@
+// ==================================================
+// File: Objects/CHEATSHEET.js
+// Purpose: Objects cheatsheet: quick examples of patterns learned.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
 // The simplest way to create an object is using an object literal 
 const circle = {
     radius: 1,
@@ -7,6 +16,7 @@ const circle = {
 // To create multiple objects with the same structure and behaviuor (methods), use a factory or a constructor. 
 
 // Factory function 
+// Regular function `createCircle(radius)`.
 function createCircle(radius) {
     return {
         radius,
@@ -15,6 +25,8 @@ function createCircle(radius) {
 }
 
 // Constructor function 
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Circle(radius) {
     this.radius = radius;
     this.draw = function () { }
@@ -28,7 +40,9 @@ x.constructor; // returns Object()
 Circle.name;
 Circle.length;
 Circle.constructor; // returns Function()
+// `.call(thisArg, ...)` runs a function but lets you choose what `this` should be inside it.
 Circle.call({}, 1); // to call the Circle function 
+// `.apply(thisArg, [args])` is like `.call`, but arguments are passed as an array.
 Circle.apply({}, [1]);
 
 // Value types are copied by their value, reference types are copied by their reference. 
@@ -52,6 +66,8 @@ if ('location' in circle)
     // Abstraction means hiding the complexity/details and showing only the essentials. 
     // We can hide the details by using private members. Replace "this" with "let". 
 
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
     function Circle(radius) {
         // Public member 
         this.radius = radius;

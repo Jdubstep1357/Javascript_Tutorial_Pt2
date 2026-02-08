@@ -1,3 +1,12 @@
+// ==================================================
+// File: Prototypes/10_Exercise/index.js
+// Purpose: Prototype exercise: building objects with shared behavior.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
 // design a stopwatch object'
 
 // object has: 1 property: duration, 3 methods: reset, start, and stop
@@ -31,6 +40,8 @@
 
 const sw = new Stopwatch();
 
+// Constructor function `Stopwatch()` — called with `new Stopwatch(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
 function Stopwatch() {
     let startTime, endTime, running, duration = 0;
 
@@ -62,6 +73,7 @@ function Stopwatch() {
 // moves it to parent prototype
 
 
+// Shared method: `Stopwatch.prototype.start()` — stored once and shared by all `Stopwatch` instances.
 Stopwatch.prototype.start = function () {
     if (this.running)
         throw new Error('Stopwatch has already started');
@@ -72,6 +84,7 @@ Stopwatch.prototype.start = function () {
 
 },
 
+// Shared method: `Stopwatch.prototype.stop()` — stored once and shared by all `Stopwatch` instances.
     Stopwatch.prototype.stop = function () {
         if (!this.running)
             throw new Error('Stopwatch has already stopped');
@@ -87,6 +100,7 @@ Stopwatch.prototype.start = function () {
 
     },
 
+// Shared method: `Stopwatch.prototype.reset()` — stored once and shared by all `Stopwatch` instances.
     Stopwatch.prototype.reset = function () {
         this.startTime = null,
             this.endTime = null,
