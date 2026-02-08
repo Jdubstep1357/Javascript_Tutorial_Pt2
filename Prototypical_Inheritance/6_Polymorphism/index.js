@@ -1,12 +1,45 @@
-// KEEP CODE SIMPLE DON'T MAKE IT TOO COMPLEX
+// ... collects all arguments and turns into array
+function mixin(target, ...sources) {
+    Object.assign(target, ...sources);
+}
 
-// Think of Animal as parent
-// 2 functions eat() and walk()
-// originally, have dog and cat
 
-// What happens if you add fish? fish can't walk
-// make more complex heirarchhy
 
-// make independant objects 
-// just make objects that link to other parts
-// Research composition
+const canEat = {
+    eat: function () {
+        this.hunger--;
+        console.log('eating');
+    }
+};
+
+const canWalk = {
+    walk: function () {
+        console.log('walking');
+    }
+};
+
+const canSwim = {
+    swim: function () {
+        console.log('swim');
+    }
+};
+
+function Person() {
+    // Add any properties specific to objects
+}
+
+
+// create person that can eat and walk
+// Added person the ability to can eat and walk
+mixin(Person.prototype, canEat, canWalk);
+console.log(person);
+
+function Goldfish() {
+
+}
+
+// modify prototype of goldfish
+mixin(Goldfish.prototype, canEat, canSwim);
+
+const goldfish = new Goldfish();
+console.log(goldfish);
