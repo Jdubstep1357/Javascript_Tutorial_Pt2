@@ -17,9 +17,14 @@ const c1 = new Circle(1);
 
 
 // Output (@) ["radius", "move"]
-console.log(Object.keys(cc1));
+console.log(Object.keys(c1));
 
 
 
-// returns all members (instance + prototype)
+// re
+// turns all members (instance + prototype)
 for (let key in c1) console.log(key);
+
+// useful tool
+// c1.hasOwnPropery('radius')
+// true
