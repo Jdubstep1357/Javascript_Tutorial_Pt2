@@ -1,0 +1,30 @@
+function Circle(radius) {
+
+    // Instance members
+    this.radius = radius;
+
+    this.move = function () {
+        console.log('move');
+    }
+}
+
+// Prottype members
+Circle.prototype.draw = function () {
+    console.log('draw');
+}
+
+const c1 = new Circle(1);
+
+
+// Output (@) ["radius", "move"]
+console.log(Object.keys(c1));
+
+
+
+// re
+// turns all members (instance + prototype)
+for (let key in c1) console.log(key);
+
+// useful tool
+// c1.hasOwnPropery('radius')
+// true
