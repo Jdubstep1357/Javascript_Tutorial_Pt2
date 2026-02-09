@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 
 
+=======
+// ==================================================
+// File: Objects/12_Getters_Setters/index.js
+// Purpose: Getters/setters: controlled access to private values.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+
+
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function Circle(radius) {
     this.radius = radius;
 
@@ -34,4 +50,8 @@ function Circle(radius) {
 
 const circle = new Circle(10);
 circle.defaultLocation = 1;
+<<<<<<< HEAD
 circle.draw();
+=======
+circle.draw();
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29

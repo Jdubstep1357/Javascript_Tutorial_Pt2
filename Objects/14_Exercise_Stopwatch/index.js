@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+// ==================================================
+// File: Objects/14_Exercise_Stopwatch/index.js
+// Purpose: Stopwatch exercise: encapsulation + state + getters.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 // design a stopwatch object'
 
 // object has: 1 property: duration, 3 methods: reset, start, and stop
@@ -18,6 +30,11 @@
 
 const sw = new Stopwatch();
 
+<<<<<<< HEAD
+=======
+// Constructor function `Stopwatch()` — called with `new Stopwatch(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function Stopwatch() {
     let startTime, endTime, running, duration = 0;
 
@@ -57,4 +74,7 @@ function Stopwatch() {
         get: function () { return duration; }
     });
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29

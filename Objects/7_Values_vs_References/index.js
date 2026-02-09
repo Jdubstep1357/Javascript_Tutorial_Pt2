@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+// ==================================================
+// File: Objects/7_Values_vs_References/index.js
+// Purpose: Value vs reference types (primitives vs objects).
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 // 2 categories of types: value types or referece tyoes
 
 /* Value Types - Primitives
@@ -41,6 +53,10 @@ x.value = 20;
 
 let number = 10;
 
+<<<<<<< HEAD
+=======
+// Regular function `increase(number)`.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function increase(number) {
     number++;
 }
@@ -54,6 +70,10 @@ console.log(number);
 let obj = { value: 10 };
 
 // object passed by reference
+<<<<<<< HEAD
+=======
+// Regular function `increase(obj)`.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function increase(obj) {
     obj++;
 }
@@ -61,4 +81,8 @@ function increase(obj) {
 increase(obj);
 console.log(obj);
 // Output: 11
+<<<<<<< HEAD
 // Objects copied by their reference
+=======
+// Objects copied by their reference
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29

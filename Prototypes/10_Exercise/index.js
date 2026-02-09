@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+// ==================================================
+// File: Prototypes/10_Exercise/index.js
+// Purpose: Prototype exercise: building objects with shared behavior.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 // design a stopwatch object'
 
 // object has: 1 property: duration, 3 methods: reset, start, and stop
@@ -31,6 +43,11 @@
 
 const sw = new Stopwatch();
 
+<<<<<<< HEAD
+=======
+// Constructor function `Stopwatch()` — called with `new Stopwatch(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function Stopwatch() {
     let startTime, endTime, running, duration = 0;
 
@@ -62,6 +79,10 @@ function Stopwatch() {
 // moves it to parent prototype
 
 
+<<<<<<< HEAD
+=======
+// Shared method: `Stopwatch.prototype.start()` — stored once and shared by all `Stopwatch` instances.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 Stopwatch.prototype.start = function () {
     if (this.running)
         throw new Error('Stopwatch has already started');
@@ -72,6 +93,10 @@ Stopwatch.prototype.start = function () {
 
 },
 
+<<<<<<< HEAD
+=======
+// Shared method: `Stopwatch.prototype.stop()` — stored once and shared by all `Stopwatch` instances.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
     Stopwatch.prototype.stop = function () {
         if (!this.running)
             throw new Error('Stopwatch has already stopped');
@@ -87,6 +112,10 @@ Stopwatch.prototype.start = function () {
 
     },
 
+<<<<<<< HEAD
+=======
+// Shared method: `Stopwatch.prototype.reset()` — stored once and shared by all `Stopwatch` instances.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
     Stopwatch.prototype.reset = function () {
         this.startTime = null,
             this.endTime = null,
@@ -97,4 +126,8 @@ Stopwatch.prototype.start = function () {
 
 
 
+<<<<<<< HEAD
 /* PROTOTYPE ENDS HERE */
+=======
+/* PROTOTYPE ENDS HERE */
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29

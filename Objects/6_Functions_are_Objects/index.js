@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+// ==================================================
+// File: Objects/6_Functions_are_Objects/index.js
+// Purpose: Functions are objects: call/apply, and how constructors are just functions.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function Circle(radius) {
     this.radius = radius;
     this.draw = function () {
@@ -6,7 +20,13 @@ function Circle(radius) {
 }
 
 
+<<<<<<< HEAD
 Circle.call({}, 1);
+=======
+// `.call(thisArg, ...)` runs a function but lets you choose what `this` should be inside it.
+Circle.call({}, 1);
+// `.apply(thisArg, [args])` is like `.call`, but arguments are passed as an array.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 Circle.apply({}, 1);
 
 const another = new Circle(1);
@@ -29,4 +49,7 @@ const another = new Circle(1);
 //     const circle = new Circle(1);
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29

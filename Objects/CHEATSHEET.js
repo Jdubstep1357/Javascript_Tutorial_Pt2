@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+// ==================================================
+// File: Objects/CHEATSHEET.js
+// Purpose: Objects cheatsheet: quick examples of patterns learned.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 // The simplest way to create an object is using an object literal 
 const circle = {
     radius: 1,
@@ -7,6 +19,10 @@ const circle = {
 // To create multiple objects with the same structure and behaviuor (methods), use a factory or a constructor. 
 
 // Factory function 
+<<<<<<< HEAD
+=======
+// Regular function `createCircle(radius)`.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function createCircle(radius) {
     return {
         radius,
@@ -15,6 +31,11 @@ function createCircle(radius) {
 }
 
 // Constructor function 
+<<<<<<< HEAD
+=======
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function Circle(radius) {
     this.radius = radius;
     this.draw = function () { }
@@ -28,7 +49,13 @@ x.constructor; // returns Object()
 Circle.name;
 Circle.length;
 Circle.constructor; // returns Function()
+<<<<<<< HEAD
 Circle.call({}, 1); // to call the Circle function 
+=======
+// `.call(thisArg, ...)` runs a function but lets you choose what `this` should be inside it.
+Circle.call({}, 1); // to call the Circle function 
+// `.apply(thisArg, [args])` is like `.call`, but arguments are passed as an array.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 Circle.apply({}, [1]);
 
 // Value types are copied by their value, reference types are copied by their reference. 
@@ -52,6 +79,11 @@ if ('location' in circle)
     // Abstraction means hiding the complexity/details and showing only the essentials. 
     // We can hide the details by using private members. Replace "this" with "let". 
 
+<<<<<<< HEAD
+=======
+// Constructor function `Circle(radius)` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
     function Circle(radius) {
         // Public member 
         this.radius = radius;
@@ -65,4 +97,8 @@ if ('location' in circle)
 Object.defineProperty(this, 'defaultLocation', {
     get: function () { return defaultLocation; },
     set: function (value) { defaultLocation = value; }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29

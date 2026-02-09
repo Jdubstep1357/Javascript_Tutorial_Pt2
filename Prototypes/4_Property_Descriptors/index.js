@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+// ==================================================
+// File: Prototypes/4_Property_Descriptors/index.js
+// Purpose: Property descriptors: writable/enumerable/configurable, getters/setters.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 let person = { name: 'Mosh' };
 
 
@@ -33,4 +45,7 @@ Object.definePropertyMethod(person, 'name', {
 person.name = 'John';
 
 console.log(Object.keys(person));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29

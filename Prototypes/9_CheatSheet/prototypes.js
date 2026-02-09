@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+// ==================================================
+// File: Prototypes/9_CheatSheet/prototypes.js
+// Purpose: Prototypes cheatsheet: common patterns + gotchas.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 // Every object (except the root object) has a prototype (parent). 
 // To get the prototype of an object:
 Object.getPrototypeOf(obj);
@@ -32,6 +44,10 @@ Object.getPrototypeOf(x) === Object.getPrototypeOf(y); // returns true
 // When dealing with large number of objects, it's better to put their
 // methods on their prototype. This way, a single instance of the methods
 // will be in the memory. 
+<<<<<<< HEAD
+=======
+// Shared method: `Circle.prototype.draw()` — stored once and shared by all `Circle` instances.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 Circle.prototype.draw = function () { }
 
 // To get the own/instance properties:
@@ -41,4 +57,7 @@ Object.keys(obj);
 for (let key in obj) { }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29

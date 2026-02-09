@@ -1,12 +1,33 @@
+<<<<<<< HEAD
+=======
+// ==================================================
+// File: Prototypical_Inheritance/5_Method_Overriding/index.js
+// Purpose: Method overriding + calling the parent method.
+// Notes:
+// - These comments are written for a beginner-friendly walkthrough.
+// - I did NOT try to change your learning style; I’m just explaining what each piece does.
+// ==================================================
+
+
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 // --------------------------------------------
 // HELPER FUNCTION: sets up inheritance
 // --------------------------------------------
 // This lets any Child "inherit" from a Parent
+<<<<<<< HEAD
+=======
+// Regular function `extend(Child, Parent)`.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function extend(Child, Parent) {
 
     // Create a new prototype object for Child
     // that inherits from Parent.prototype
     // (This is the core of JavaScript inheritance)
+<<<<<<< HEAD
+=======
+// Inheritance step: make `Child.prototype` inherit from `Parent.prototype` (so `Child` instances can use parent methods).
+// After this line, remember to reset the constructor: `Child.prototype.constructor = Child`.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
     Child.prototype = Object.create(Parent.prototype);
 
     // After replacing the prototype, we must fix the constructor
@@ -19,11 +40,20 @@ function extend(Child, Parent) {
 // --------------------------------------------
 // PARENT "CLASS"
 // --------------------------------------------
+<<<<<<< HEAD
+=======
+// Constructor function `Shape()` — called with `new Shape(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function Shape() {
 
 }
 
 // Method shared by ALL shapes
+<<<<<<< HEAD
+=======
+// Shared method: `Shape.prototype.duplicate()` — stored once and shared by all `Shape` instances.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 Shape.prototype.duplicate = function () {
     console.log('duplicate from Shape');
 };
@@ -33,6 +63,11 @@ Shape.prototype.duplicate = function () {
 // --------------------------------------------
 // CHILD "CLASS"
 // --------------------------------------------
+<<<<<<< HEAD
+=======
+// Constructor function `Circle()` — called with `new Circle(...)` to create an object.
+// Inside a constructor, `this` becomes the new object being created.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 function Circle() {
 
 }
@@ -49,6 +84,10 @@ extend(Circle, Shape);
 // but now we REPLACE it with a new version.
 //
 // This is called "method overriding".
+<<<<<<< HEAD
+=======
+// Shared method: `Circle.prototype.duplicate()` — stored once and shared by all `Circle` instances.
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
 Circle.prototype.duplicate = function () {
 
     // Call the parent version FIRST
@@ -64,4 +103,8 @@ Circle.prototype.duplicate = function () {
 // --------------------------------------------
 // CREATE OBJECT
 // --------------------------------------------
+<<<<<<< HEAD
 const c = new Circle();
+=======
+const c = new Circle();
+>>>>>>> 4f977151a8bcef78118b8e0a7cb6459340820c29
