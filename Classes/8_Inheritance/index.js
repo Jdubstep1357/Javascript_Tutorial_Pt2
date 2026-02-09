@@ -1,30 +1,28 @@
-const _radius = new WeakMap();
+class Shape {
 
-// read _radius outside of constructor
-
-class Circle {
-    constrctor(radius) {
-        _radius.set(this, radius);
-    }
-    // OLD WAY
-    // Object.defineProperty(this, 'radius', {
-    //     get: function() {
-
-    //     }
-    // });
-
-
-    // GETTER
-    get radius() {
-        return _radius.get(this);
+    // Adding color to shapes
+    constructor(color) {
+        this.color = color;
     }
 
-    // SETTER
-    set radius(value) {
-        if (value <= 0) throw new Error('invalid radius');
-        _radius.set(this, value);
+    move() {
+        console.log('moved');
     }
-
 }
 
-const c = new Circle(1);
+
+// inherits from class shape
+class Circle extends Shape {
+
+    constructor(color, radius) {
+        // super keyword references parent object
+        super(color);
+        this.radius = radius;
+    }
+
+    draw() {
+        console.log('draw');
+    }
+}
+
+const c = new Circle('red', 12);
