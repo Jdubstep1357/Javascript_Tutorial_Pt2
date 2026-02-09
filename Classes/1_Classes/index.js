@@ -14,6 +14,7 @@ class Circle {
     // used to initialize class
     constructor(radius) {
         this.radius = radius;
+        this.move = function () { }
     }
 
     draw() {
