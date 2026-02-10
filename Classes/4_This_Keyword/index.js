@@ -18,7 +18,7 @@ draw();
 
 
 class Circle2 {
-    draw() {
+    draw2() {
         console.log(this);
     }
 }
