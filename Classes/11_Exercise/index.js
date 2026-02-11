@@ -7,3 +7,5 @@ const stack = new Stack()
 // push - adds to stack
 // if none and use stack.pop throw error: Stack is empty
 // same as peek, whereby at 0 throw error: Stack is empty
+
+//
